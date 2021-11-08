@@ -12,4 +12,7 @@ public static class controladorjuego
   public static Action close;
   public static Action away;
   public static Action change;
+  public static Action pause;
+  public static Action audio;
+  public static Action audioplay;
 }

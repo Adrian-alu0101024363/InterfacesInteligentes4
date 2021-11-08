@@ -16,7 +16,6 @@ public class reconocedor : MonoBehaviour
     }
     void Start()
     {
-        //playerRenderer = player.GetComponent<Renderer>();
         keywordActions.Add("左", controladorjuego.left);
         keywordActions.Add("動く", controladorjuego.right);
         keywordActions.Add("変えて", controladorjuego.change);

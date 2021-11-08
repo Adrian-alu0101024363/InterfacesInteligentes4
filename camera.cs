@@ -20,6 +20,7 @@ public class camera : MonoBehaviour
     void Start()
     {
        controladorjuego.photo += TakePhoto;
+       controladorjuego.pause += Manage;
         defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
         if (devices.Length == 0) {
@@ -44,5 +45,12 @@ public class camera : MonoBehaviour
         background.rectTransform.localScale = new Vector3(1f,scaleY, 1f);
         int orient = -cam.videoRotationAngle;
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+    }
+    void Manage() {
+      if (cam.isPlaying) {
+        cam.Pause();
+      } else {
+        cam.Play();
+      }
     }
 }
